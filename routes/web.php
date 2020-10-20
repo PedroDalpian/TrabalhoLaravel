@@ -32,6 +32,14 @@ Route::get('quadras', 'QuadrasController@index');
 Route::get('quadras/create', 'QuadrasController@create');
 Route::post('quadras/store', 'QuadrasController@store');
 
+Route::get('times', 'TimesController@index');
+Route::get('times/create', 'TimesController@create');
+Route::post('times/store', 'TimesController@store');
+
+Route::get('reservas', 'ReservasController@index');
+Route::get('reservas/create', 'ReservasController@create');
+Route::post('reservas/store', 'ReservasController@store');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

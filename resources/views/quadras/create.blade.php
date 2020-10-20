@@ -18,6 +18,9 @@
                                                 'FUTVOLEI'=>'Quadra FUTVOLÊI',
                                                 'BASQUETE'=>'Quadra BASQUETE',
                                                 'HANDEBOL'=>'Quadra HANDEBOL',
+                                                'RUBGBY'=>'Quadra RUBGBY',
+                                                'BASEBALL'=>'Quadra BASEBALL',
+                                                'FUTEBOLAMERICANO'=>'Quadra FUTEBOL AMERICANO',                                                
                                                 'MULTIESPORTE'=>'Quadra MULTI ESPORTES'),
                                             'FUTSAL', ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-1 m-1">{!! Form::label('ativo', 'Ativo:') !!}</div>

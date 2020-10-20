@@ -56,6 +56,12 @@
             </div>
             <div class="form-inline mt-1">
                 <div class="col-4"> </div> 
+                <div class="col-1">CEP</div> 
+                <div class="col-2">{!! Form::text('CEP', null, ['class'=>'form-control', 'required']) !!}</div>
+                <div class="col-5"> </div>
+            </div>
+            <div class="form-inline mt-1">
+                <div class="col-4"> </div> 
                 <div class="col-1">Estado</div> 
                 <div class="col-2">{!! Form::select('UF', 
                                         array(  'RS'=>'Rio Grande do Sul',
@@ -108,17 +114,20 @@
                                                     'FUTVOLEI'=>'Quadra FUTVOLÊI',
                                                     'BASQUETE'=>'Quadra BASQUETE',
                                                     'HANDEBOL'=>'Quadra HANDEBOL',
+                                                    'RUBGBY'=>'Quadra RUBGBY',
+                                                    'BASEBALL'=>'Quadra BASEBALL',
+                                                    'FUTEBOLAMERICANO'=>'Quadra FUTEBOL AMERICANO',
                                                     'MULTIESPORTE'=>'Quadra MULTI ESPORTES'),
                                                 'FUTSAL', ['class'=>'form-control', 'required']) !!}
                 </div>
                 <div class="col-5"> </div>
             </div>
             <div class="form-inline mt-1">
-                <div class="col-4"> </div>
-                <div class="col-4">
-                    <h4><button type="button" class="btn btn-primary pt-2"><h5>Pesquisar Quadras</h5></button>
+                <div class="col-3"> </div>
+                <div class="col-6">
+                    <h4><button type="button" class="btn btn-primary pt-2"><h5>Pesquisar Quadras de Esportes</h5></button>
                 </div>
-                <div class="col-4"> </div>
+                <div class="col-3"> </div>
             </div>        
         </div>
 
