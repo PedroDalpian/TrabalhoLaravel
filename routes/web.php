@@ -27,6 +27,7 @@ Route::get('quadras', function() {
 });
 */
 
+
 Route::get('quadras', 'QuadrasController@index');
 Route::get('quadras/create', 'QuadrasController@create');
 Route::post('quadras/store', 'QuadrasController@store');
