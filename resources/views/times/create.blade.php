@@ -26,6 +26,8 @@
         </div>
     </div>
     </br>
+    <div class="border">
+    </br>
     <div class="row justify-content-center">
         <div class="col-4"></div>
         <div class="col-2">{!! Form::label('jogador1', 'Jogador 1') !!}</div>
@@ -65,9 +67,8 @@
         <div class="col-1"></div>
     </div>
     </br>
-    <div class="row justify-content-center">
-        <i class="far fa-futbol"></i>
-    </div>
+    <ul class="border">
+    </ul>
     </br>
     <div class="row">
         <div class="col-2"></div>
@@ -108,10 +109,13 @@
         <div class="col-3"></div>
     </div>
     </br>
+    </div>
+    </br>
     <div class="row justify-content-center">
         <div class="m-1">{!! Form::submit('Gravar Time', ['class'=>'btn btn-success']) !!}</div>
         <div class="m-1">{!! Form::reset('Limpar Campos', ['class'=>'btn btn-danger']) !!}</div>
     </div>
+    
 </div>
     {!! Form::close() !!}
 @stop
