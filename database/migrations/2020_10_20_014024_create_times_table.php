@@ -32,8 +32,8 @@ class CreateTimesTable extends Migration
             $table->string('jogador13', 100);
             $table->string('jogador14', 100);
             $table->string('jogador15', 100);
-            $table->integer('idreserva', 100);
-            $table->integer('idusuario', 100);
+            $table->integer('idreserva');
+            $table->integer('idusuario');
             $table->timestamps();
         });
     }

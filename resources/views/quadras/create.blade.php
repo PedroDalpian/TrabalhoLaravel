@@ -4,7 +4,11 @@
     <h3>Nova Quadra</h3>
     {!! Form::open(['url'=>'quadras/store']) !!}
 
-<div class="container text">
+<div class="container">
+    <div class="row">
+        <div class="col-1 m-1">{!! Form::label('ativo', 'Ativo:') !!}</div>
+        <div class="col-4 m-1">{!! Form::checkbox('ativo', null, ['cheked'=>'true']) !!} (Marcado mostra a quadra para os usuários)</div>
+    </div>
     <div class="row">
         <div class="col-1 m-1">{!! Form::label('nome', 'Nome:') !!}</div>
         <div class="col-4 m-1">{!! Form::text('nome', null, ['class'=>'form-control', 'required']) !!}</div>
@@ -23,8 +27,7 @@
                                                 'FUTEBOLAMERICANO'=>'Quadra FUTEBOL AMERICANO',                                                
                                                 'MULTIESPORTE'=>'Quadra MULTI ESPORTES'),
                                             'FUTSAL', ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1">{!! Form::label('ativo', 'Ativo:') !!}</div>
-        <div class="col-1 m-1">{!! Form::checkbox('ativo', null, ['cheked'=>'true']) !!}</div>
+        
     </div>
     <div class="row">
         <div class="col-1 m-1">{!! Form::label('endereco', 'Endereço:') !!}</div>
@@ -41,7 +44,7 @@
     <div class="row">
         <div class="col-1 m-1">{!! Form::label('cidade', 'Cidade:') !!}</div>
         <div class="col-4 m-1">{!! Form::text('cidade', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1">{!! Form::label('UF', 'UF:') !!}</div>
+        <div class="col-1 m-1">{!! Form::label('UF', 'Estado:') !!}</div>
         <div class="col-3 m-1">{!! Form::select('UF', 
                                         array(  'RS'=>'Rio Grande do Sul',
                                                 'AC'=>'Acre',
@@ -130,16 +133,16 @@
     <h5>Detalhes da Quadra</h5>
     <div class="row">
         <div class="col-2 m-1">{!! Form::label('observacao', 'Observação:') !!}</div>
-        <div class="col-8 m-1">{!! Form::text('observacao', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-8 m-1 ">{!! Form::textarea('observacao', null, ['class'=>'form-control','rows'=>'3','required']) !!}</div>
     </div>
     <div class="row">
         <div class="col-2 m-1">{!! Form::label('redesocial', 'Rede Social:') !!}</div>
         <div class="col-8 m-1">{!! Form::text('redesocial', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
 
-    <div class="row d-flex justify-content-center">
-        <div class="m-1">{!! Form::submit('Gravar Quadra', ['class'=>'btn btn-primary']) !!}</div>
-        <div class="m-1">{!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}</div>
+    <div class="row justify-content-center">
+        <div class="m-1">{!! Form::submit('Gravar Quadra', ['class'=>'btn btn-success']) !!}</div>
+        <div class="m-1">{!! Form::reset('Limpar Campos', ['class'=>'btn btn-danger']) !!}</div>
     </div>
 </div>
     {!! Form::close() !!}

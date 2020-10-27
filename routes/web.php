@@ -36,9 +36,11 @@ Route::get('times', 'TimesController@index');
 Route::get('times/create', 'TimesController@create');
 Route::post('times/store', 'TimesController@store');
 
+/*
 Route::get('reservas', 'ReservasController@index');
 Route::get('reservas/create', 'ReservasController@create');
 Route::post('reservas/store', 'ReservasController@store');
+*/
 
 Auth::routes();
 
