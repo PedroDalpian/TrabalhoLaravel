@@ -27,10 +27,22 @@ Route::get('quadras', function() {
 });
 */
 
-
+/*
 Route::get('quadras', 'QuadrasController@index');
 Route::get('quadras/create', 'QuadrasController@create');
 Route::post('quadras/store', 'QuadrasController@store');
+Route::get('quadras/{id}/destroy', 'QuadrasController@destroy');
+Route::get('quadras/{id}/edit', 'QuadrasController@edit');
+Route::put('quadras/{id}/update', 'QuadrasController@update');
+*/
+Route::group(['prefix'=>'quadras', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',              ['as'=>'quadras',            'uses'=>'QuadrasController@index'    ]);
+    Route::get('create',        ['as'=>'quadras.create',     'uses'=>'QuadrasController@create'   ]);
+    Route::get('{id}/destroy',  ['as'=>'quadras.destroy',    'uses'=>'QuadrasController@destroy'  ]);
+    Route::get('{id}/edit',     ['as'=>'quadras.edit',       'uses'=>'QuadrasController@edit'     ]);
+    Route::put('{id}/update',   ['as'=>'quadras.update',     'uses'=>'QuadrasController@update'   ]);
+    Route::post('store',        ['as'=>'quadras.store',      'uses'=>'QuadrasController@store'    ]);
+});
 
 Route::get('times', 'TimesController@index');
 Route::get('times/create', 'TimesController@create');

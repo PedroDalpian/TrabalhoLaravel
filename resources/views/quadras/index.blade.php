@@ -15,6 +15,7 @@
             <th>Numero</th>
             <th>Cidade</th>
             <th>Estado</th>
+            <th>Ações</th>
         </thead>
 
         <tbody>
@@ -28,6 +29,10 @@
                     <td>{{ $quadra->numero }}</td>
                     <td>{{ $quadra->cidade }}</td>
                     <td>{{ $quadra->UF }}</td>
+                    <td>
+                        <a href="{{ route('quadras.edit', ['id'=>$quadra->id]) }}" class="btn-sm btn-warning">Editar</a>
+                        <a href="{{ route('quadras.destroy', ['id'=>$quadra->id]) }}" class="btn-sm btn-danger">Remover</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

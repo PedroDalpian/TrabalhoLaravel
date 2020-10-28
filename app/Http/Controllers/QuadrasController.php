@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Quadra;
+use App\Http\Requests\QuadraRequest;
 
 class QuadrasController extends Controller
 {
@@ -34,11 +35,30 @@ class QuadrasController extends Controller
         return view ('quadras.create');
     }
 
-    public function store(Request $request){
+    public function store(QuadraRequest $request){
         $nova_quadra = $request->all();
         $nova_quadra['ativo'] = (!isset($nova_quadra['ativo']))? false : true;
         Quadra::create($nova_quadra);        
 
-        return redirect('quadras');
+        //return redirect('quadras');
+        return redirect()->route('quadras');
     }
+
+    public function destroy($id){
+        Ator:: find($id)->delete();
+        //return redirect('quadras');
+        return redirect()->route('quadras');
+    }
+
+    public function edit($id) {
+        $quadra = Quadra::find($id);
+        return view('quadras.edit', compact('quadra'));
+    }
+
+    public function update(QuadraRequest $request, $id){
+        Quadra::find($id)->update($request->all());
+        //return redirect('quadras');
+        return redirect()->route('quadras');
+    }
+
 }
