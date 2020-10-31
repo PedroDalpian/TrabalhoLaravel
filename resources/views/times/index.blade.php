@@ -9,13 +9,18 @@
         <thead>
             <th>Nome do Time</th>
             <th>Modalidade</th>
+            <th>Ações</th>
         </thead>
 
         <tbody>
             @foreach($times as $time)
                 <tr>
-                    <td>{{ $times->nome }}</td>
-                    <td>{{ $times->modalidade }}</td>
+                    <td>{{ $time->nome }}</td>
+                    <td>{{ $time->modalidade }}</td>
+                    <td>
+                        <a href="{{ route('times.edit', ['id'=>$time->id]) }}" class="btn-sm btn-warning">Editar</a>
+                        <a href="{{ route('times.destroy', ['id'=>$time->id]) }}" class="btn-sm btn-danger">Remover</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

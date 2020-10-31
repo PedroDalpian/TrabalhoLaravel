@@ -45,7 +45,7 @@ class QuadrasController extends Controller
     }
 
     public function destroy($id){
-        Ator:: find($id)->delete();
+        Quadra:: find($id)->delete();
         //return redirect('quadras');
         return redirect()->route('quadras');
     }

@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Novo Time</h3>
+    <h3>Editando Time: {{ $time->nome }}</h3>
 
     @if($errors->any())
         <ul class="alert alert-danger">
@@ -11,12 +11,12 @@
         </ul>
     @endif
 
-    {!! Form::open(['route'=>'times.store']) !!}
+    {!! Form::open(['route'=>["times.update", 'id'=>$time->id], 'method'=>'put']) !!}
 
-<div class="container text">
+    <div class="container text">
     <div class="row">
-        <div class="col-2 m-1">{!! Form::label('nome', 'Nome do Time:') !!}</div>
-        <div class="col-3 m-1">{!! Form::text('nome', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-2 m-1">{!! Form::label('nome', 'Nome Time:') !!}</div>
+        <div class="col-3 m-1">{!! Form::text('nome', $time->nome, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-2 m-1">{!! Form::label('modalidade', 'Modalidade:') !!}</div>
         <div class="col-3 m-1">{!! Form::select('modalidade', 
                                         array(  'FUTSAL'=>'Quadra FUTSAL',
@@ -44,7 +44,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-3"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador1', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador1', $time->jogador1, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-3"></div>
     </div>
     <div class="row">
@@ -56,9 +56,9 @@
     </div>
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador2', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador2', $time->jogador2, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-4"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador3', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador3', $time->jogador3, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-1"></div>
     </div>
     <div class="row">
@@ -70,9 +70,9 @@
     </div>
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador4', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador4', $time->jogador4, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-4"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador5', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador5', $time->jogador5, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-1"></div>
     </div>
     </br>
@@ -88,9 +88,9 @@
     </div>
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador6', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador6', $time->jogador6, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-4"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador7', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador7', $time->jogador7, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-1"></div>
     </div>
     <div class="row">
@@ -102,9 +102,9 @@
     </div>
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador8', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador8', $time->jogador8, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-4"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador9', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador9', $time->jogador9, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-1"></div>
     </div>
     <div class="row justify-content-center">
@@ -114,51 +114,10 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-3"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador10', null, ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-3 m-1">{!! Form::text('jogador10', $time->jogador10, ['class'=>'form-control', 'required']) !!}</div>
         <div class="col-3"></div>
     </div>
     </br>
-
-
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-2">{!! Form::label('jogador11', 'Jogador 11') !!}</div>
-        <div class="col-5"></div>
-        <div class="col-2">{!! Form::label('jogador12', 'Jogador 12') !!}</div>
-        <div class="col-1"></div>
-    </div>
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador11', null, ['class'=>'form-control']) !!}</div>
-        <div class="col-4"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador12', null, ['class'=>'form-control']) !!}</div>
-        <div class="col-1"></div>
-    </div>
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-2">{!! Form::label('jogador8', 'Jogador 13') !!}</div>
-        <div class="col-5"></div>
-        <div class="col-2">{!! Form::label('jogador9', 'Jogador 14') !!}</div>
-        <div class="col-1"></div>
-    </div>
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador13', null, ['class'=>'form-control']) !!}</div>
-        <div class="col-4"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador14', null, ['class'=>'form-control']) !!}</div>
-        <div class="col-1"></div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-4"></div>
-        <div class="col-2">{!! Form::label('jogador15', 'Jogador 15') !!}</div>
-        <div class="col-3"></div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-3"></div>
-        <div class="col-3 m-1">{!! Form::text('jogador15', null, ['class'=>'form-control' ]) !!}</div>
-        <div class="col-3"></div>
-    </div>
-
     </div>
     </br>
     <div class="row justify-content-center">

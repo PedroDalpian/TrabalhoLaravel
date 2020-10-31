@@ -44,9 +44,19 @@ Route::group(['prefix'=>'quadras', 'where'=>['id'=>'[0-9]+']], function() {
     Route::post('store',        ['as'=>'quadras.store',      'uses'=>'QuadrasController@store'    ]);
 });
 
+/*
 Route::get('times', 'TimesController@index');
 Route::get('times/create', 'TimesController@create');
 Route::post('times/store', 'TimesController@store');
+*/
+Route::group(['prefix'=>'times', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',              ['as'=>'times',            'uses'=>'TimesController@index'    ]);
+    Route::get('create',        ['as'=>'times.create',     'uses'=>'TimesController@create'   ]);
+    Route::get('{id}/destroy',  ['as'=>'times.destroy',    'uses'=>'TimesController@destroy'  ]);
+    Route::get('{id}/edit',     ['as'=>'times.edit',       'uses'=>'TimesController@edit'     ]);
+    Route::put('{id}/update',   ['as'=>'times.update',     'uses'=>'TimesController@update'   ]);
+    Route::post('store',        ['as'=>'times.store',      'uses'=>'TimesController@store'    ]);
+});
 
 /*
 Route::get('reservas', 'ReservasController@index');
