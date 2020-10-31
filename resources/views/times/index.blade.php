@@ -8,6 +8,7 @@
     <table class="table table-stripe table-bordered table-hover">
         <thead>
             <th>Nome do Time</th>
+            <th>Responsável</th>
             <th>Modalidade</th>
             <th>Ações</th>
         </thead>
@@ -16,7 +17,8 @@
             @foreach($times as $time)
                 <tr>
                     <td>{{ $time->nome }}</td>
-                    <td>{{ $time->modalidade }}</td>
+                    <td></td>
+                    <td>{{ $time->modalidade }}</td>                    
                     <td>
                         <a href="{{ route('times.edit', ['id'=>$time->id]) }}" class="btn-sm btn-warning">Editar</a>
                         <a href="{{ route('times.destroy', ['id'=>$time->id]) }}" class="btn-sm btn-danger">Remover</a>

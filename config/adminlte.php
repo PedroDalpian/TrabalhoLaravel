@@ -264,6 +264,11 @@ return [
             'url'  => 'quadras',
             'icon' => 'far fa-calendar-alt',
         ],
+        [
+            'text' => 'Times',
+            'url'  => 'times',
+            'icon' => 'fas fa-users',
+        ],
         /*
         [
             'text' => 'change_password',
