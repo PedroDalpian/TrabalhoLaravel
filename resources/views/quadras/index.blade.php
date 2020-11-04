@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+@extends('layouts.default')
 
 @section('content')
 <h1>Quadras</h1>
@@ -31,11 +31,17 @@
                     <td>{{ $quadra->UF }}</td>
                     <td>
                         <a href="{{ route('quadras.edit', ['id'=>$quadra->id]) }}" class="btn-sm btn-warning">Editar</a>
-                        <a href="{{ route('quadras.destroy', ['id'=>$quadra->id]) }}" class="btn-sm btn-danger">Remover</a>
+                        <a href="#" onclick="return ConfirmaExclusao({{$quadra->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
                 </tr>
             @endforeach
         </tbody>
-    </table>    
+    </table>
+
+    {{ $quadras->links() }}
+
 @stop
 
+@section('table-delete')
+"quadras"
+@endsection

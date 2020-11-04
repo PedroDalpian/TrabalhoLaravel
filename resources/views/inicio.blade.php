@@ -10,6 +10,27 @@
 
     <title>Ah Quadra!</title>
   </head>
+  <script>
+    function mostraEscondeCampos() {
+        var instituicao = document.getElementById("selecionaRegiaoCEP").value;
+
+        if (instituicao === 'mostraCamposCEP') {
+            document.getElementById("mostraCamposCEP").style.display = "block";
+            document.getElementById("lblMostraCamposCEP").style.display = "block";
+        } else {
+            document.getElementById("mostraCamposCEP").style.display = "none";
+            document.getElementById("lblMostraCamposCEP").style.display = "none";
+
+        }
+        if (instituicao === 'mostraCamposRegiao') {
+            document.getElementById("mostraCamposRegiao").style.display = "block";
+            document.getElementById("lblMostraCamposRegiao").style.display = "block";
+        } else {
+            document.getElementById("mostraCamposRegiao").style.display = "none";
+            document.getElementById("lblMostraCamposRegiao").style.display = "none";
+        }
+    }
+  </script>
 <body>
         <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,20 +68,21 @@
             <h4>TEMOS A QUADRA CERTA PARA VOCÊ</h4>
             </br>
             <div class="form-check form-check-inline">
-                <h4><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="true"></h4>
+                <h4><input class="form-check-input" type="radio" name="inlineRadioOptions" id="mostraCamposRegiao" value="mostraCamposRegiao" checked="true" onchange="mostraEscondeCampos()"></h4>
                 <h4><label class="form-check-label" for="inlineRadio1">Região</label></h4>
             </div>
             <div class="form-check form-check-inline">
-                <h4><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"></h4>
+                <h4><input class="form-check-input" type="radio" name="inlineRadioOptions" id="mostraCamposCEP" value="mostraCamposCEP" onchange="mostraEscondeCampos()"></h4>
                 <h4><label class="form-check-label" for="inlineRadio2">CEP</label></h4>
             </div>
-            <div class="form-inline mt-1">
+            <div id="mostraCamposCEP" name="mostraCamposCEP" class="form-inline mt-1" style="display: none;">
                 <div class="col-4"> </div> 
                 <div class="col-1">CEP</div> 
-                <div class="col-2">{!! Form::text('CEP', null, ['class'=>'form-control', 'required']) !!}</div>
+                <div class="col-2">{!! Form::text('CEP', null, ['class'=>'form-control' , 'required']) !!}</div>
                 <div class="col-5"> </div>
             </div>
-            <div class="form-inline mt-1">
+
+            <div id="mostraCamposRegiao" name="mostraCamposRegiao" class="form-inline mt-1">
                 <div class="col-4"> </div> 
                 <div class="col-1">Estado</div> 
                 <div class="col-2">{!! Form::select('UF', 
@@ -96,7 +118,7 @@
                 </div>
                 <div class="col-5"></div>
             </div> 
-            <div class="form-inline mt-1">
+            <div id="mostraCamposRegiao" name="mostraCamposRegiao" class="form-inline mt-1">
                 <div class="col-4"> </div> 
                 <div class="col-1">Cidade</div> 
                 <div class="col-2">{!! Form::text('cidade', null, ['class'=>'form-control', 'required']) !!}</div>
@@ -125,7 +147,7 @@
             <div class="form-inline mt-1">
                 <div class="col-3"> </div>
                 <div class="col-6">
-                    <h4><button type="button" class="btn btn-primary pt-2"><h5>Pesquisar Quadras de Esportes</h5></button>
+                    <h4><button type="button" class="btn btn-primary pt-2"><h5>Click Pesquisar Quadras de Esportes</h5></button>
                 </div>
                 <div class="col-3"> </div>
             </div>        
