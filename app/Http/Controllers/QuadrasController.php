@@ -27,7 +27,7 @@ class QuadrasController extends Controller
     */
    
     public function index(){
-       $quadras = Quadra::orderBy('nome')->paginate(15);
+       $quadras = Quadra::orderBy('nome')->paginate(9);
        return view('quadras.index', ['quadras'=>$quadras]);
     }
 

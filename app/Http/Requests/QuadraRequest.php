@@ -51,8 +51,7 @@ class QuadraRequest extends FormRequest
             'horafimdomingo' => 'required',           
 
             'observacao' => 'required',
-            'redesocial' => 'required',
-            'ativo' => 'required'
+            'redesocial' => 'required'
         ];
     }
 }

@@ -7,11 +7,11 @@
         function ConfirmaExclusao(id) {
             swal.fire({
                 title: 'Confirma a exclusão?', text: "Esta ação não pederá ser revertida!", 
-                type: "warning", showCancelButton: true, confirmBottomColor: "#3085d6",
-                cancelButtonColor: "#d33", confirmButtonText: "Sim! Excluir.",
-                cancelButtonText: "Cancelar!", closeOnConfirm: false,
-            }).then(function(isConfirm)){
-                if(isConfirm.value){
+                type: 'warning', showCancelButton: true, confirmBottonColor: '#3085d6',
+                cancelButtonColor: '#d33', confirmButtonText: 'Sim! Excluir.',
+                cancelButtonText: 'Cancelar!', closeOnConfirm: false,
+            }).then(function(isConfirm) {
+                if(isConfirm.value) {
                     $.get('/'+ @yield('table-delete') +'/'+id+'/destroy', function(data){
                         swal.fire(
                             'Deletado!',
@@ -22,7 +22,7 @@
                         });
                     });
                 }
-            });
+            })
         }
     </script>
 @stop
