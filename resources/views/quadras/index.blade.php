@@ -22,7 +22,7 @@
         @foreach($quadras as $quadra)
             <tr>
                 <td>{{ $quadra->nome }}</td>
-                <td>{{ $quadra->modalidade }}</td>
+                <td>{{ $quadra->modalidade->descricao }}</td>
                 <td>{{ $quadra->telefone }}</td>
                 <td>{{ $quadra->endereco }}</td>
                 <td>{{ $quadra->bairro }}</td>

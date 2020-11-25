@@ -21,21 +21,11 @@
     <div class="row">
         <div class="col-1 m-1">{!! Form::label('nome', 'Nome:') !!}</div>
         <div class="col-4 m-1">{!! Form::text('nome', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1">{!! Form::label('modalidade', 'Modalidade:') !!}</div>
-        <div class="col-3 m-1">{!! Form::select('modalidade', 
-                                        array(  'FUTSAL'=>'Quadra FUTSAL',
-                                                'SOCIETY'=>'Quadra SOCIETY',
-                                                'CAMPO'=>'Quadra CAMPO',                                                
-                                                'VOLEI'=>'Quadra VOLÊI',
-                                                'TENNIS'=>'Quadra TENNIS',
-                                                'FUTVOLEI'=>'Quadra FUTVOLÊI',
-                                                'BASQUETE'=>'Quadra BASQUETE',
-                                                'HANDEBOL'=>'Quadra HANDEBOL',
-                                                'RUBGBY'=>'Quadra RUBGBY',
-                                                'BASEBALL'=>'Quadra BASEBALL',
-                                                'FUTEBOLAMERICANO'=>'Quadra FUTEBOL AMERICANO',                                                
-                                                'MULTIESPORTE'=>'Quadra MULTI ESPORTES'),
-                                            'FUTSAL', ['class'=>'form-control', 'required']) !!}</div>
+        <div class="col-1 m-1">{!! Form::label('modalidade_id', 'Modalidade:') !!}</div>
+        <div class="col-3 m-1">{!! Form::select('modalidade_id', 
+                                        \App\Modalidade::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
+                                        null, ['class'=>'form-control', 'required']) !!}
+        </div>
         
     </div>
     <div class="row">
