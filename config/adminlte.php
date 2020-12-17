@@ -248,25 +248,35 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],*/
-        ['header' => 'Quadras'],
+        ['header' => 'Menu'],
         [
-            'text' => 'Listagem',
+            'text' => 'Consultar Reservas',
+            'url'  => 'reservas',
+            'icon' => 'far fa-calendar-alt',
+        ],
+        [
+            'text' => 'Nova Reserva',
+            'url'  => 'reservas/create',
+            'icon' => 'far fa-calendar-alt',
+        ],
+        [
+            'text' => 'Consultar Quadras',
             'url'  => 'quadras',
-            'icon' => 'far fa-list-alt',
+            'icon' => 'far fa-futbol',
         ],
         [
             'text' => 'Nova Quadra',
             'url'  => 'quadras/create',
             'icon' => 'far fa-futbol',
-        ],
+        ],        
         [
-            'text' => 'Reservas',
-            'url'  => 'quadras',
-            'icon' => 'far fa-calendar-alt',
-        ],
-        [
-            'text' => 'Times',
+            'text' => 'Consultar Times',
             'url'  => 'times',
+            'icon' => 'fas fa-users',
+        ],
+        [
+            'text' => 'Novo Time',
+            'url'  => 'times/create',
             'icon' => 'fas fa-users',
         ],
         /*

@@ -28,18 +28,25 @@ class CreateQuadrasTable extends Migration
 
             $table->string('horainiciosegunda', 5);
             $table->string('horafimsegunda', 5);
+            $table->float('valorsegunda');
             $table->string('horainicioterca', 5);
             $table->string('horafimterca', 5);
+            $table->float('valorterca');
             $table->string('horainicioquarta', 5);
             $table->string('horafimquarta', 5);
+            $table->float('valorquarta');
             $table->string('horainicioquinta', 5);
             $table->string('horafimquinta', 5);
+            $table->float('valorquinta');
             $table->string('horainiciosexta', 5);
             $table->string('horafimsexta', 5);
+            $table->float('valorsexta');
             $table->string('horainiciosabado', 5);
             $table->string('horafimsabado', 5);
+            $table->float('valorsabado');
             $table->string('horainiciodomingo', 5);
-            $table->string('horafimdomingo', 5);           
+            $table->string('horafimdomingo', 5);
+            $table->float('valordomingo');          
 
             $table->string('observacao',500);
             $table->string('redesocial',500);

@@ -14,8 +14,12 @@ class CreateReservasTable extends Migration
     public function up()
     {
         Schema::create('reservas', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('responsavel', 100);
+            $table->string('horainicioreserva', 5);
+            $table->string('horafimreserva', 5);
             $table->timestamps();
+            
         });
     }
 

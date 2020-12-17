@@ -90,56 +90,42 @@
         <div class="col-1 m-1">{!! Form::text('horainiciosegunda', null, ['class'=>'form-control', 'required']) !!}</div>
         {!! Form::label('horafimsegunda', ' x ') !!}
         <div class="col-1 m-1">{!! Form::text('horafimsegunda', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1"></div>{!! Form::label('valorsegunda', 'Valor hora:') !!}
-        <div class="col-1 m-1">{!! Form::text('valorsegunda', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
     <div class="row">        
         <div class="col-2 m-1">{!! Form::label('horainicioterca', 'Terça-Feira:') !!}</div>
         <div class="col-1 m-1">{!! Form::text('horainicioterca', null, ['class'=>'form-control', 'required']) !!}</div>
         {!! Form::label('horafimterca', ' x ') !!}
         <div class="col-1 m-1">{!! Form::text('horafimterca', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1"></div>{!! Form::label('valorterca', 'Valor hora:') !!}
-        <div class="col-1 m-1">{!! Form::text('valorterca', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
     <div class="row">        
         <div class="col-2 m-1">{!! Form::label('horainicioquarta', 'Quarta-Feira:') !!}</div>
         <div class="col-1 m-1">{!! Form::text('horainicioquarta', null, ['class'=>'form-control', 'required']) !!}</div>
         {!! Form::label('horafimquarta', ' x ') !!}
         <div class="col-1 m-1">{!! Form::text('horafimquarta', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1"></div>{!! Form::label('valorquarta', 'Valor hora:') !!}
-        <div class="col-1 m-1">{!! Form::text('valorquarta', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
     <div class="row">        
         <div class="col-2 m-1">{!! Form::label('horainicioquinta', 'Quinta-Feira:') !!}</div>
         <div class="col-1 m-1">{!! Form::text('horainicioquinta', null, ['class'=>'form-control', 'required']) !!}</div>
         {!! Form::label('horafimquinta', ' x ') !!}
         <div class="col-1 m-1">{!! Form::text('horafimquinta', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1"></div>{!! Form::label('valorquinta', 'Valor hora:') !!}
-        <div class="col-1 m-1">{!! Form::text('valorquinta', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
     <div class="row">        
         <div class="col-2 m-1">{!! Form::label('horainiciosexta', 'Sexta-Feira:') !!}</div>
         <div class="col-1 m-1">{!! Form::text('horainiciosexta', null, ['class'=>'form-control', 'required']) !!}</div>
         {!! Form::label('horafimsexta', ' x ') !!}
         <div class="col-1 m-1">{!! Form::text('horafimsexta', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1"></div>{!! Form::label('valorsexta', 'Valor hora:') !!}
-        <div class="col-1 m-1">{!! Form::text('valorsexta', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
     <div class="row">        
         <div class="col-2 m-1">{!! Form::label('horainiciosabado', 'Sábado:') !!}</div>
         <div class="col-1 m-1">{!! Form::text('horainiciosabado', null, ['class'=>'form-control', 'required']) !!}</div>
         {!! Form::label('horafimsabado', ' x ') !!}
         <div class="col-1 m-1">{!! Form::text('horafimsabado', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1"></div>{!! Form::label('valorsabadoegunda', 'Valor hora:') !!}
-        <div class="col-1 m-1">{!! Form::text('valorsabado', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
     <div class="row">        
         <div class="col-2 m-1">{!! Form::label('horainiciodomingo', 'Domingo:') !!}</div>
         <div class="col-1 m-1">{!! Form::text('horainiciodomingo', null, ['class'=>'form-control', 'required']) !!}</div>
         {!! Form::label('horafimdomingo', ' x ') !!}
         <div class="col-1 m-1">{!! Form::text('horafimdomingo', null, ['class'=>'form-control', 'required']) !!}</div>
-        <div class="col-1 m-1"></div>{!! Form::label('valordomingo', 'Valor hora:') !!}
-        <div class="col-1 m-1">{!! Form::text('valordomingo', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
 
     <br/>
