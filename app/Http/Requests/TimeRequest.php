@@ -24,7 +24,7 @@ class TimeRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => 'required|min:4|min:5',
+            'nome' => 'required|min:4',
             'modalidade' => 'required|min:4',
             'jogador1' => 'required|min:4',
             'jogador2' => 'required|min:4',

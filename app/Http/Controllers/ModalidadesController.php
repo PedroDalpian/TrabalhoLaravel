@@ -26,10 +26,19 @@ class ModalidadesController extends Controller
      }
  
      public function destroy($id){
-         Modalidade:: find($id)->delete();
-         //return redirect('quadras');
-         return redirect()->route('modalidades');
-     }
+        try{
+            Modalidade:: find($id)->delete();
+            //return redirect('quadras');
+            $ret = array('status'=>200, 'msg'=>"null");
+        } catch (\Illuminate\Database\QueryException $e) {
+            $ret = array('status'=>500, 'msg'=>$e->getMessage());
+        }
+        catch (\PDOException $e) {
+            $ret = Array('status'=>500, 'msg'=>$e->getMessage());
+        }
+        return $ret;
+        
+    }
  
      public function edit($id) {
          $modalidade = Modalidade::find($id);

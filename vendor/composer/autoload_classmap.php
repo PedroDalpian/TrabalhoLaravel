@@ -30,6 +30,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\ModalidadeRequest' => $baseDir . '/app/Http/Requests/ModalidadeRequest.php',
     'App\\Http\\Requests\\QuadraRequest' => $baseDir . '/app/Http/Requests/QuadraRequest.php',
+    'App\\Http\\Requests\\ReservaRequest' => $baseDir . '/app/Http/Requests/ReservaRequest.php',
     'App\\Http\\Requests\\TimeRequest' => $baseDir . '/app/Http/Requests/TimeRequest.php',
     'App\\Modalidade' => $baseDir . '/app/Modalidade.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

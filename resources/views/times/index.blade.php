@@ -27,5 +27,11 @@
             @endforeach
         </tbody>
     </table>    
+{{ $times->links() }}
+
 @stop
+
+@section('table-delete')
+"times"
+@endsection
 

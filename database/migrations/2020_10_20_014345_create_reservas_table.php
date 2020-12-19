@@ -18,6 +18,8 @@ class CreateReservasTable extends Migration
             $table->string('responsavel', 100);
             $table->string('horainicioreserva', 5);
             $table->string('horafimreserva', 5);
+            $table->date('datareserva');        
+
             $table->timestamps();
             
         });

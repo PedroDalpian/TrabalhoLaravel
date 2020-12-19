@@ -73,6 +73,16 @@ Route::group(['prefix'=>'modalidades', 'where'=>['id'=>'[0-9]+']], function() {
     Route::post('store',        ['as'=>'modalidades.store',      'uses'=>'ModalidadesController@store'    ]);
 });
 
+
+Route::group(['prefix'=>'reservas', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',              ['as'=>'reservas',            'uses'=>'ReservasController@index'    ]);
+    Route::get('create',        ['as'=>'reservas.create',     'uses'=>'ReservasController@create'   ]);
+    Route::get('{id}/destroy',  ['as'=>'reservas.destroy',    'uses'=>'ReservasController@destroy'  ]);
+    Route::get('{id}/edit',     ['as'=>'reservas.edit',       'uses'=>'ReservasController@edit'     ]);
+    Route::put('{id}/update',   ['as'=>'reservas.update',     'uses'=>'ReservasController@update'   ]);
+    Route::post('store',        ['as'=>'reservas.store',      'uses'=>'ReservasController@store'    ]);
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -539,6 +539,7 @@ class ComposerStaticInit32552f429448d9411d7a563f006d6254
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\ModalidadeRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ModalidadeRequest.php',
         'App\\Http\\Requests\\QuadraRequest' => __DIR__ . '/../..' . '/app/Http/Requests/QuadraRequest.php',
+        'App\\Http\\Requests\\ReservaRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ReservaRequest.php',
         'App\\Http\\Requests\\TimeRequest' => __DIR__ . '/../..' . '/app/Http/Requests/TimeRequest.php',
         'App\\Modalidade' => __DIR__ . '/../..' . '/app/Modalidade.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

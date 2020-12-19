@@ -12,8 +12,12 @@ class Quadra extends Model
     'horafimsegunda','horafimterca','horafimquarta','horafimquinta','horafimsexta','horafimsabado','horafimdomingo','ativo',
     'valorsegunda', 'valorterca', 'valorquarta', 'valorquinta', 'valorsexta', 'valorsabado', 'valordomingo'];
 
-public function modalidade() {
-    return $this->belongsTo("App\Modalidade");
-}
+    public function modalidade() {
+        return $this->belongsTo("App\Modalidade");
+    }
+
+    public function reservas() {
+        return $this->hasMany("App\Reserva");
+    }
 
 }

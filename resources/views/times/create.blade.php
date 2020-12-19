@@ -119,7 +119,7 @@
     </div>
     </br>
 
-
+<!--
     <div class="row">
         <div class="col-2"></div>
         <div class="col-2">{!! Form::label('jogador11', 'Jogador 11') !!}</div>
@@ -161,6 +161,8 @@
 
     </div>
     </br>
+-->
+
     <div class="row justify-content-center">
         <div class="m-1">{!! Form::submit('Gravar Time', ['class'=>'btn btn-success']) !!}</div>
         <div class="m-1">{!! Form::reset('Limpar Campos', ['class'=>'btn btn-danger']) !!}</div>
