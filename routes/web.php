@@ -83,6 +83,8 @@ Route::group(['prefix'=>'reservas', 'where'=>['id'=>'[0-9]+']], function() {
     Route::post('store',        ['as'=>'reservas.store',      'uses'=>'ReservasController@store'    ]);
 });
 
+Route::get('pdf', 'PdfController@geraPdf');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
