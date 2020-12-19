@@ -80,9 +80,8 @@
         <div class="col-1"></div>
     </div>
     </br>
-    <ul class="border">
+    <ul class="border">    
     </ul>
-    </br>
     <div class="row">
         <div class="col-2"></div>
         <div class="col-2">{!! Form::label('jogador6', 'Jogador 6') !!}</div>
@@ -122,7 +121,8 @@
         <div class="col-3"></div>
     </div>
     </br>
-
+    </ul>
+    </div>    
 <!--
     <div class="row">
         <div class="col-2"></div>

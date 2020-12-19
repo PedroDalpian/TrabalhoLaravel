@@ -9,7 +9,7 @@ use App\Http\Requests\TimeRequest;
 class TimesController extends Controller
 {
     public function index(){
-        $times = Time::orderBy('nome')->paginate(9);
+        $times = Time::orderBy('nome')->paginate(8);
         return view('times.index', ['times'=>$times]);
      }
  

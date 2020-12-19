@@ -9,7 +9,7 @@ use App\Http\Requests\ReservaRequest;
 class ReservasController extends Controller
 {
     public function index(){
-        $reservas = Reserva::orderBy('responsavel')->paginate(9);
+        $reservas = Reserva::orderBy('responsavel')->paginate(8);
         return view('reservas.index', ['reservas'=>$reservas]);
      }
  

@@ -7,8 +7,8 @@
 </div>
 <table class="table table-stripe table-bordered table-hover">
     <thead>
-        <th>Nome</th>
-        <th>Responsavel</th>        
+        <th>Responsavel</th>
+        <th>Data</th>     
         <th>Hora Início</th>
         <th>Hora Fim</th>
         <th>Time</th>
@@ -22,6 +22,7 @@
         @foreach($reservas as $reserva)
             <tr>
                 <td>{{ $reserva->responsavel }}</td>
+                <td>{{ Carbon\Carbon::parse($reserva->datareserva)->format('d/m/Y') }}</td>
                 <td>{{ $reserva->horainicioreserva }}</td>
                 <td>{{ $reserva->horafimreserva }}</td>
                 <td>{{ $reserva->time->nome }}</td>

@@ -9,7 +9,7 @@ use App\Http\Requests\ModalidadeRequest;
 class ModalidadesController extends Controller
 {
     public function index(){
-        $modalidades = Modalidade::orderBy('descricao')->paginate(9);
+        $modalidades = Modalidade::orderBy('descricao')->paginate(8);
         return view('modalidades.index', ['modalidades'=>$modalidades]);
      }
  
