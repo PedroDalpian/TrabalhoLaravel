@@ -19,7 +19,7 @@ class TimesController extends Controller
  
      public function store(TimeRequest $request){
         $novo_time = $request->all();
-        if ($novo_time['jogador11'] = '') {
+        /*if ($novo_time['jogador11'] = '') {
             $novo_time['jogador11'] = '';
             $novo_time['jogador12'] = '';
             $novo_time['jogador13'] = '';
@@ -27,7 +27,7 @@ class TimesController extends Controller
             $novo_time['jogador15'] = '';
             $novo_time['idreserva'] = 1;
             $novo_time['idusuario'] = 1;
-        }
+        }*/
         
         Time::create($novo_time);        
 

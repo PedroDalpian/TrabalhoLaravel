@@ -17,7 +17,7 @@
             @foreach($times as $time)
                 <tr>
                     <td>{{ $time->nome }}</td>
-                    <td></td>
+                    <td>{{ $time->responsavel }}</td>
                     <td>{{ $time->modalidade }}</td>                    
                     <td>
                         <a href="{{ route('times.edit', ['id'=>$time->id]) }}" class="btn-sm btn-warning">Editar</a>

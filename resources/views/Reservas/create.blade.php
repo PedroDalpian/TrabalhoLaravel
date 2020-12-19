@@ -20,20 +20,21 @@
         <div class="col-1 m-1">{!! Form::label('datareserva', 'Data Reserva:') !!}</div>
         <div class="col-4 m-1">{!! Form::date('datareserva', null, ['class'=>'form-control', 'required']) !!}</div>
     </div>
-    <div class="row">        
-        <div class="col-3 m-1">{!! Form::select('time_id', 
+    <div class="row"> 
+        <div class="col-1 m-1">{!! Form::label('time_id', 'Time:') !!}</div>       
+        <div class="col-4 m-1">{!! Form::select('time_id', 
                                         \App\Time::orderBy('nome')->pluck('nome', 'id')->toArray(),
                                         null, ['class'=>'form-control', 'required']) !!}
         </div>
         <div class="col-1 m-1">{!! Form::label('quadra_id', 'Quadra:') !!}</div>
-        <div class="col-3 m-1">{!! Form::select('quadra_id', 
+        <div class="col-4 m-1">{!! Form::select('quadra_id', 
                                         \App\Quadra::orderBy('nome')->pluck('nome', 'id')->toArray(),
                                         null, ['class'=>'form-control', 'required']) !!}
         </div>
     </div>
 
     <br/>
-    <h5>Horários para Reservas</h5>
+    <h5>Horário da Reserva</h5>
     <div class="row">        
         <div class="col-2 m-1">{!! Form::label('horainicioreserva', 'Hora Início:') !!}</div>
         <div class="col-1 m-1">{!! Form::text('horainicioreserva', null, ['class'=>'form-control', 'required']) !!}</div>

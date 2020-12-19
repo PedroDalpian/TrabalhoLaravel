@@ -16,6 +16,7 @@ class CreateTimesTable extends Migration
         Schema::create('times', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome', 100);
+            $table->string('responsavel', 100); 
             $table->string('modalidade', 100);           
             $table->string('jogador1', 100);
             $table->string('jogador2', 100);
@@ -27,13 +28,7 @@ class CreateTimesTable extends Migration
             $table->string('jogador8', 100);
             $table->string('jogador9', 100);
             $table->string('jogador10', 100);
-            $table->string('jogador11', 100);
-            $table->string('jogador12', 100);
-            $table->string('jogador13', 100);
-            $table->string('jogador14', 100);
-            $table->string('jogador15', 100);
-            $table->integer('idreserva');
-            $table->integer('idusuario');
+
             $table->timestamps();
         });
     }

@@ -25,6 +25,7 @@ class TimeRequest extends FormRequest
     {
         return [
             'nome' => 'required|min:4',
+            'responsavel' => 'required|min:4',
             'modalidade' => 'required|min:4',
             'jogador1' => 'required|min:4',
             'jogador2' => 'required|min:4',

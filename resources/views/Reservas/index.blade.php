@@ -19,7 +19,7 @@
     </thead>
 
     <tbody>
-        @foreach($quadras as $quadra)
+        @foreach($reservas as $reserva)
             <tr>
                 <td>{{ $reserva->responsavel }}</td>
                 <td>{{ $reserva->horainicioreserva }}</td>

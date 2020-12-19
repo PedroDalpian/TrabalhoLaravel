@@ -34,6 +34,10 @@
                                             'FUTSAL', ['class'=>'form-control', 'required']) !!}
         </div>
     </div>
+    <div class="row">
+        <div class="col-2 m-1">{!! Form::label('responsavel', 'Responsável:') !!}</div>
+        <div class="col-3 m-1">{!! Form::text('responsavel', $time->responsavel, ['class'=>'form-control', 'required']) !!}</div>
+    </div>    
     </br>
     <div class="border">
     </br>
