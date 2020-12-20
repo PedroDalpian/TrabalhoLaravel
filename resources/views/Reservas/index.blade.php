@@ -2,8 +2,9 @@
 @section('content')
 
 <div>
-    <h1 class="float-left">Reservas</h1>
-    <a class="btn-sm btn-primary mr-5 float-right" href="../reservas/create">Nova Reserva</a>
+    <h1 class="float-left">Reservas</h1>    
+    <a class="btn-sm btn-primary float-right" href="../reservas/create">Nova Reserva</a>
+    <a class="btn-sm btn-primary mr-2 float-right" href="../pdf">Imprimir Reservas</a>
 </div>
 <table class="table table-stripe table-bordered table-hover">
     <thead>
